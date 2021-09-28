@@ -1,0 +1,47 @@
+{
+    "name": "portfolio_basic",
+    "version": "1.0.0",
+    "description": "Portfolio_basic",
+    "main": "webpack.config.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Ahnyeongjun/Portfolio_basic.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Ahnyeongjun/Portfolio_basic/issues"
+    },
+    "homepage": "https://github.com/Ahnyeongjun/Portfolio_basic#readme",
+    "dependencies": {
+        "@types/react-dom": "^17.0.9",
+        "babel-loader": "^8.2.2",
+        "css-loader": "^6.3.0",
+        "dotenv": "^10.0.0",
+        "dotenv-webpack": "^7.0.3",
+        "file-loader": "^6.2.0",
+        "html-webpack-plugin": "^5.3.2",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-redux": "^7.2.5",
+        "react-router-dom": "^5.3.0",
+        "sass-loader": "^12.1.0",
+        "styled-components": "^5.3.1",
+        "ts-loader": "^9.2.6",
+        "tsx": "^1.0.0",
+        "typescript": "^4.4.3",
+        "url-loader": "^4.1.1"
+    },
+    "devDependencies": {
+        "@types/react-router-dom": "^5.3.0",
+        "@types/styled-components": "^5.1.14",
+        "webpack-cli": "^4.8.0",
+        "webpack": "^5.54.0",
+        "webpack-dev-server": "^4.3.0"
+    },
+    "scripts": {
+        "test": "jest --config jest.config.js --watchAll",
+        "start": "webpack serve --mode development ",
+        "build": "webpack"
+    }
+}
