@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { HoverSway } from './animation';
+import { HoverSway, FallenBlock, shakeAA } from './animation';
 export const Wrapper = styled.div`
     display: flex;
     margin: 0 auto;
@@ -26,13 +26,15 @@ export const AniMationWrapper = styled.div`
     width: 50%;
     min-height: 1000px;
 `;
-export const scene = styled.div`
+export const scene = styled.div<{ boxNum: number }>`
     width: 160px;
     height: 160px;
     perspective: 600px;
     margin-left: 30px;
+    animation: ${(props) => FallenBlock(props.boxNum)} 1s linear 1s forwards;
+    position: relative;
     :hover {
-        animation: ${HoverSway} 0.3s linear infinite both;
+        //   animation: ${HoverSway} 0.3s linear infinite both;
     }
 `;
 export const Title = styled.div`
@@ -47,8 +49,8 @@ export const cube = styled.div<{ rotateY: number; rotateX: number }>`
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-
     transform: ${(props) => `translateZ(-80px) rotateY(${props.rotateY}deg) rotateX(${props.rotateX}deg)`};
+    animation: ${(props) => shakeAA(props.rotateY % 10)} 2s linear 1s forwards;
 `;
 
 export const FloorWrapper = styled.div`
