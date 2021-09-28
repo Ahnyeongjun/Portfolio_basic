@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
     margin: 0 auto;
 `;
 export const Intro = styled.div`
+    height: 100vh;
     width: 100%;
     background: linear-gradient(40deg, rgba(92, 150, 242, 1) 36%, rgba(217, 136, 148, 1) 80%);
 `;
