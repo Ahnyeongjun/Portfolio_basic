@@ -3,38 +3,27 @@ import { keyframes } from 'styled-components';
 export const HoverSway = keyframes`
 
     0% {
-        position:absolute;
-        bottom:50px;
       -webkit-transform: translate(0);
               transform: translate(0);
     }
     20% {
-        position:absolute;
-        bottom:50px;
+   
       -webkit-transform: translate(-2px, 2px);
               transform: translate(-2px, 2px);
     }
     40% {
-        position:absolute;
-        bottom:50px;
       -webkit-transform: translate(-2px, -2px);
               transform: translate(-2px, -2px);
     }
     60% {
-        position:absolute;
-        bottom:50px;
       -webkit-transform: translate(2px, 2px);
               transform: translate(2px, 2px);
     }
     80% {
-        position:absolute;
-        bottom:50px;
       -webkit-transform: translate(2px, -2px);
               transform: translate(2px, -2px);
     }
     100% {
-        position:absolute;
-        bottom:50px;
       -webkit-transform: translate(0);
               transform: translate(0);
     }

@@ -32,10 +32,13 @@ export const scene = styled.div<{ boxNum: number }>`
     height: 160px;
     perspective: 600px;
     margin-left: 30px;
-    animation: ${(props) => FallenBlock(props.boxNum)} 1s linear 1s forwards;
     position: relative;
+
     :hover {
-        //   animation: ${HoverSway} 0.3s linear infinite both;
+        animation: ${HoverSway} 0.3s linear infinite both;
+    }
+    &.fallen {
+        animation: ${(props) => FallenBlock(props.boxNum)} 1s linear 0s forwards;
     }
 `;
 export const Title = styled.div`
@@ -51,7 +54,9 @@ export const cube = styled.div<{ rotateY: number; rotateX: number }>`
     height: 100%;
     transform-style: preserve-3d;
     transform: ${(props) => `translateZ(-80px) rotateY(${props.rotateY}deg) rotateX(${props.rotateX}deg)`};
-    animation: ${(props) => shakeAA(props.rotateY % 10)} 2s linear 1s forwards;
+    &.fallen {
+        animation: ${(props) => shakeAA(props.rotateY % 10)} 2s linear 0s forwards;
+    }
 `;
 
 export const FloorWrapper = styled.div`
