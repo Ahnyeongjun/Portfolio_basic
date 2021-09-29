@@ -3,10 +3,64 @@ import * as S from './style';
 const Intro = () => {
     var winH = window.innerHeight;
     const onclick = (num: number) => {
-        const element = document.getElementById(`scene${num}`);
-        const element2 = document.getElementById(`cube${num}`);
-        element.classList.add('fallen');
-        element2.classList.add('fallen');
+        document.getElementById(`scene${num}`).classList.add('fallen');
+        document.getElementById(`cube${num}`).classList.add('fallen');
+
+        switch (num) {
+            case 3:
+                document.getElementById(`scene1`).classList.add('fallen');
+                document.getElementById(`cube1`).classList.add('fallen');
+                break;
+            case 4:
+                document.getElementById(`scene1`).classList.add('fallen');
+                document.getElementById(`scene2`).classList.add('fallen');
+                document.getElementById(`cube1`).classList.add('fallen');
+                document.getElementById(`cube2`).classList.add('fallen');
+                break;
+            case 5:
+                document.getElementById(`scene2`).classList.add('fallen');
+                document.getElementById(`cube2`).classList.add('fallen');
+                break;
+            case 6:
+                if (
+                    document.getElementById(`scene3`).classList.contains(`fallen`) ||
+                    document.getElementById(`scene4`).classList.contains('fallen')
+                ) {
+                    document.getElementById(`scene3`).classList.add('fallen');
+                    document.getElementById(`cube3`).classList.add('fallen');
+
+                    break;
+                } else if (document.getElementById(`scene1`).classList.contains(`fallen`)) {
+                    document.getElementById(`scene3`).classList.add('fallen');
+                    document.getElementById(`cube3`).classList.add('fallen');
+
+                    break;
+                }
+            case 7:
+                if (document.getElementById('scene4').classList.contains(`fallen`)) {
+                    break;
+                }
+            case 8:
+                if (document.getElementById('scene5').classList.contains(`fallen`)) {
+                    break;
+                } else if (document.getElementById(`scene2`).classList.contains(`fallen`)) {
+                    document.getElementById(`scene5`).classList.add('fallen');
+                    document.getElementById(`cube5`).classList.add('fallen');
+                    break;
+                }
+
+                document.getElementById(`scene1`).classList.add('fallen');
+                document.getElementById(`scene2`).classList.add('fallen');
+                document.getElementById(`scene3`).classList.add('fallen');
+                document.getElementById(`scene4`).classList.add('fallen');
+                document.getElementById(`scene5`).classList.add('fallen');
+                document.getElementById(`cube1`).classList.add('fallen');
+                document.getElementById(`cube2`).classList.add('fallen');
+                document.getElementById(`cube3`).classList.add('fallen');
+                document.getElementById(`cube4`).classList.add('fallen');
+                document.getElementById(`cube5`).classList.add('fallen');
+                break;
+        }
     };
     return (
         <S.Intro>

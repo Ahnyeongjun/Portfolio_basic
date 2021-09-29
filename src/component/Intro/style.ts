@@ -55,7 +55,7 @@ export const cube = styled.div<{ rotateY: number; rotateX: number }>`
     transform-style: preserve-3d;
     transform: ${(props) => `translateZ(-80px) rotateY(${props.rotateY}deg) rotateX(${props.rotateX}deg)`};
     &.fallen {
-        animation: ${(props) => shakeAA(props.rotateY % 10)} 2s linear 0s forwards;
+        animation: ${(props) => shakeAA()} 2s linear 0s forwards;
     }
 `;
 

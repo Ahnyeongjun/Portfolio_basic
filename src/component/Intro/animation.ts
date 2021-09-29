@@ -71,11 +71,13 @@ export const FallenBlock = (y: number) => keyframes`
 }
 
 `;
-export const shakeAA = (y: number) => keyframes`
+export const shakeAA = () => keyframes`
 0%{
-    transform: translateZ(-100px) rotate3d(0,0,0)  rotateY(0);
+    transform: translateZ(-100px) rotate3d(0,0,0)  
 }
 100%{
-    transform: ${`translateZ(-100px) rotate3d(1,0,1,${Math.random() * 500}deg)`};
+    transform: ${`translateZ(-100px)  rotateY(${Math.random() < 0.5 ? Math.random() * 200 : Math.random() * 200 * -1}deg) rotateX(${
+        Math.random() < 0.5 ? Math.random() * 200 : Math.random() * 200 * -1
+    }deg)`};
 }
 `;
