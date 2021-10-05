@@ -102,11 +102,13 @@ const Intro = () => {
     return (
         <S.Intro>
             <S.Wrapper>
-                <S.AniMationWrapper>
+                <S.TextWrapper>
                     <S.Title>HI I'm</S.Title>
                     <S.Title>Young jun</S.Title>
                     <S.Title>web develovper</S.Title>
-                </S.AniMationWrapper>
+                    <S.Content>세상에 도움이 되기 위해서 열심히 공부중인 개발자입니다.</S.Content>
+                    <S.Content>자바와 자바스크립트를 기반으로 둔 개발자입니다.</S.Content>
+                </S.TextWrapper>
 
                 <S.AniMationWrapper>
                     <S.FloorWrapper>

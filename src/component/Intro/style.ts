@@ -19,11 +19,21 @@ export const IntroWrapper = styled.div`
     margin: 10vw 0vw 0vw 15vw;
 `;
 export const AniMationWrapper = styled.div`
+    padding-top: 7vw;
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 50%;
+    width: 30vw;
+    min-height: 1000px;
+`;
+export const TextWrapper = styled.div`
+    padding: 10vw 0 10vw 10vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 40vw;
     min-height: 1000px;
 `;
 export const scene = styled.div<{ boxNum: number }>`
@@ -42,9 +52,14 @@ export const scene = styled.div<{ boxNum: number }>`
 `;
 export const Title = styled.div`
     position: relative;
+    margin-bottom: 2vh;
     font-weight: bold;
     color: white;
-    font-size: 3rem;
+    font-size: 5rem;
+`;
+export const Content = styled.div`
+    color: white;
+    line-height: 1.5rem;
 `;
 
 export const cube = styled.div<{ rotateY: number; rotateX: number }>`
