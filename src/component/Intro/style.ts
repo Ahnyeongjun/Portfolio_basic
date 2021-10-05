@@ -19,7 +19,6 @@ export const IntroWrapper = styled.div`
     margin: 10vw 0vw 0vw 15vw;
 `;
 export const AniMationWrapper = styled.div`
-    margin-top: 150px;
     position: relative;
     display: flex;
     flex-direction: column;
