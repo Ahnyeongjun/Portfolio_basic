@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 export const Intro = styled.div`
     height: 100vh;
     width: 100%;
-    background: linear-gradient(40deg, rgba(92, 150, 242, 1) 36%, rgba(217, 136, 148, 1) 80%);
+    background: #1d1d1d;
 `;
 export const IntroWrapper = styled.div`
     // background: white;
@@ -18,8 +18,12 @@ export const IntroWrapper = styled.div`
     width: 30vw;
     margin: 10vw 0vw 0vw 15vw;
 `;
-export const AniMationWrapper = styled.div`
-    padding-top: 7vw;
+export const AnimationWrapper = styled.div`
+    display: flex;
+    padding-top: 10vw;
+`;
+export const BlockWrapper = styled.div`
+    padding-top: 10vw;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -27,8 +31,16 @@ export const AniMationWrapper = styled.div`
     width: 30vw;
     min-height: 1000px;
 `;
+export const header = styled.header`
+    height: 8vh;
+    width: 100vw;
+    background: skyblue;
+`;
+export const BtnWrapper = styled.div`
+    color: white;
+`;
 export const TextWrapper = styled.div`
-    padding: 10vw 0 10vw 10vw;
+    padding: 10vw 3vw 10vw 10vw;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -36,9 +48,10 @@ export const TextWrapper = styled.div`
     width: 40vw;
     min-height: 1000px;
 `;
+
 export const scene = styled.div<{ boxNum: number }>`
-    width: 160px;
-    height: 160px;
+    width: 180px;
+    height: 180px;
     perspective: 600px;
     margin-left: 30px;
     position: relative;
@@ -90,31 +103,31 @@ export const cube__face = styled.div`
 
     &.front {
         background: rgba(98, 206, 203);
-        transform: rotateY(0deg) translateZ(80px);
+        transform: rotateY(0deg) translateZ(90px);
     }
 
     &.back {
         background: rgba(98, 155, 206);
-        transform: rotateY(180deg) translateZ(80px);
+        transform: rotateY(180deg) translateZ(90px);
     }
 
     &.right {
         background: rgba(98, 101, 206);
-        transform: rotateY(90deg) translateZ(80px);
+        transform: rotateY(90deg) translateZ(90px);
     }
 
     &.left {
         background: rgba(149, 98, 206);
-        transform: rotateY(-90deg) translateZ(80px);
+        transform: rotateY(-90deg) translateZ(90px);
     }
 
     &.top {
         background: rgba(203, 98, 206);
-        transform: rotateX(90deg) translateZ(80px);
+        transform: rotateX(90deg) translateZ(90px);
     }
 
     &.bottom {
         background: rgba(206, 98, 155);
-        transform: rotateX(-90deg) translateZ(80px);
+        transform: rotateX(-90deg) translateZ(90px);
     }
 `;

@@ -101,6 +101,7 @@ const Intro = () => {
     };
     return (
         <S.Intro>
+            <S.header />
             <S.Wrapper>
                 <S.TextWrapper>
                     <S.Title>HI I'm</S.Title>
@@ -109,8 +110,8 @@ const Intro = () => {
                     <S.Content>세상에 도움이 되기 위해서 열심히 공부중인 개발자입니다.</S.Content>
                     <S.Content>자바와 자바스크립트를 기반으로 둔 개발자입니다.</S.Content>
                 </S.TextWrapper>
-
-                <S.AniMationWrapper>
+                <S.AnimationWrapper></S.AnimationWrapper>
+                <S.BlockWrapper>
                     <S.FloorWrapper>
                         <S.scene boxNum={1} id={'scene1'} onClick={() => onclick(1)}>
                             <S.cube rotateX={10} rotateY={10} id={'cube1'}>
@@ -197,7 +198,7 @@ const Intro = () => {
                             </S.cube>
                         </S.scene>
                     </S.FloorWrapper>
-                </S.AniMationWrapper>
+                </S.BlockWrapper>
             </S.Wrapper>
         </S.Intro>
     );
