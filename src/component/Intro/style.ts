@@ -111,10 +111,14 @@ export const heightContent = styled.div`
     color: rgb(201, 156, 245);
     @media only screen and (max-height: 1000px) {
         font-size: 18px;
+        height: 90%;
     }
 `;
 export const heightBox = styled.div`
     height: 20%;
     width: 100%;
     background: rgb(201, 156, 245);
+    @media only screen and (max-height: 1000px) {
+        height: 10%;
+    }
 `;
