@@ -27,10 +27,10 @@ export const widthWrapper = styled.div`
 `;
 export const ItemWrapper = styled.div`
     height: 70px;
-    margin-top: 100px;
+    padding-top: 100px;
     display: flex;
     @media only screen and (max-height: 1000px) {
-        margin-top: 90px;
+        padding-top: 90px;
     }
 `;
 export const BtnWrapper = styled.div`
