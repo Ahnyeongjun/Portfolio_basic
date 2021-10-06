@@ -1,9 +1,25 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import { NotoSans, NotoSansKRFont_Regular, NotoSans_Bold, NotoSans_Thin } from './fonts';
 export const GlobalStyle = createGlobalStyle`
 
-    
-      * {
-    font-family:NotoSansKR !important;
+    @font-face {
+        font-family: NotoSans;
+        src: url(${NotoSans});
+    }
+    @font-face {
+        font-family: NotoSans_KR;
+        src: url(${NotoSansKRFont_Regular});
+    }
+    @font-face {
+        font-family: NotoSans_Bold;
+        src: url(${NotoSans_Bold});
+    }
+    @font-face {
+        font-family: NotoSans_Thin;
+        src: url(${NotoSans_Thin});
+    }
+    * {
+    font-family:NotoSans !important;
     }
     *::-webkit-scrollbar {
         display: none;
