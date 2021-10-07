@@ -77,6 +77,7 @@ export const ItemWrapper = styled.div`
     }
     @media only screen and (max-width: 500px) {
         padding-top: 50px;
+        height: 40px;
     }
 `;
 export const BtnWrapper = styled.div`
@@ -87,7 +88,7 @@ export const BtnWrapper = styled.div`
         margin-left: 7vw;
         margin-right: 1vw;
         width: 20vw;
-        margin-top: calc(70px - 4vw);
+        margin-top: calc(50px - 4vw);
     }
 `;
 export const Btn = styled.div`
