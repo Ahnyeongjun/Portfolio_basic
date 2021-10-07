@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Intro = styled.div`
     height: calc(100vh - 70px);
+    min-height: 830px; //900px 70은 header
     width: 1300px;
     margin: 0 auto;
     background: white;
@@ -16,14 +17,22 @@ export const SvgBox = styled.div`
     bottom: 105px;
     right: calc(0.5 * (100vw - 1200px));
     position: absolute;
+    @media only screen and (max-height: 900px) {
+        top: 310px;
+    }
 `;
 export const widthWrapper = styled.div`
-    bottom: 45px;
+    bottom: 60px;
+    height: 5px;
+    margin-left: 5px;
     right: calc(0.5 * (100vw - 1300px));
-    height: 20px;
+    background: rgb(201, 156, 245);
     position: absolute;
     width: 1300px;
     display: flex;
+    @media only screen and (max-height: 900px) {
+        top: 850px;
+    }
 `;
 export const ItemWrapper = styled.div`
     height: 70px;
@@ -75,13 +84,13 @@ export const heightWrapper = styled.div`
     width: 5px;
     bottom: 65px;
     right: calc(0.5 * (100vw - 1300px));
-`;
-export const widthBox = styled.div`
-    display: flex;
-    height: 5px;
-    width: 65%;
     background: rgb(201, 156, 245);
+    @media only screen and (max-height: 900px) {
+        top: 260px;
+        height: 590px;
+    }
 `;
+
 export const decorate = styled.div`
     width: 240px;
     height: 100%;
@@ -96,29 +105,22 @@ export const decorate2 = styled.div`
 
 export const widthContent = styled.div`
     font-family: NotoSans_KR !important;
-    font-size: 20px;
-    width: 35%;
+    font-size: 1.1rem;
+    width: auto;
     line-height: 10px;
     color: rgb(201, 156, 245);
+    padding-right: 20px;
+    background: white;
 `;
 export const heightContent = styled.div`
-    height: 80%;
+    height: auto;
     width: 100%;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     font-family: NotoSans_KR !important;
-    font-size: 20px;
+    font-size: 1.1rem;
     color: rgb(201, 156, 245);
-    @media only screen and (max-height: 1000px) {
-        font-size: 18px;
-        height: 90%;
-    }
-`;
-export const heightBox = styled.div`
-    height: 20%;
-    width: 100%;
-    background: rgb(201, 156, 245);
-    @media only screen and (max-height: 1000px) {
-        height: 10%;
-    }
+    white-space: nowrap;
+    background: white;
+    padding-bottom: 20px;
 `;
