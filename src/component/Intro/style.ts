@@ -6,6 +6,13 @@ export const Intro = styled.div`
     width: 1300px;
     margin: 0 auto;
     background: white;
+    @media only screen and (max-width: 1400px) {
+        width: 100vw;
+    }
+    @media only screen and (max-width: 500px) {
+        height: calc(60vh - 70px);
+        min-height: 600px;
+    }
 `;
 export const Header = styled.div`
     height: 70px;
@@ -20,6 +27,21 @@ export const SvgBox = styled.div`
     @media only screen and (max-height: 900px) {
         top: 310px;
     }
+    @media only screen and (max-width: 1400px) {
+        width: 400px;
+        height: 400px;
+        top: calc(50vh - 100px);
+        left: calc(50vw - 200px);
+    }
+    @media only screen and (max-width: 900px) {
+        width: 50vw;
+        height: 50vw;
+        top: 300px;
+        left: calc(50vw - 25vw);
+    }
+    @media only screen and (max-width: 500px) {
+        top: 250px;
+    }
 `;
 export const widthWrapper = styled.div`
     bottom: 60px;
@@ -33,6 +55,13 @@ export const widthWrapper = styled.div`
     @media only screen and (max-height: 900px) {
         top: 850px;
     }
+    @media only screen and (max-width: 1400px) {
+        width: 80vw;
+        left: 10vw;
+    }
+    @media only screen and (max-width: 500px) {
+        top: 500px;
+    }
 `;
 export const ItemWrapper = styled.div`
     height: 70px;
@@ -41,11 +70,25 @@ export const ItemWrapper = styled.div`
     @media only screen and (max-height: 1000px) {
         padding-top: 90px;
     }
+    @media only screen and (max-width: 1400px) {
+        width: 80vw;
+        margin-left: 10vw;
+        padding-top: 70px;
+    }
+    @media only screen and (max-width: 500px) {
+        padding-top: 50px;
+    }
 `;
 export const BtnWrapper = styled.div`
     display: flex;
     margin-left: 400px;
     justify-content: space-between;
+    @media only screen and (max-width: 1400px) {
+        margin-left: 7vw;
+        margin-right: 1vw;
+        width: 20vw;
+        margin-top: calc(70px - 4vw);
+    }
 `;
 export const Btn = styled.div`
     margin: 0 12px;
@@ -53,6 +96,11 @@ export const Btn = styled.div`
     border-radius: 50%;
     width: 60px;
     height: 60px;
+    @media only screen and (max-width: 1400px) {
+        width: 4vw;
+        height: 4vw;
+        margin: 0 0.5vw;
+    }
     &.one {
         background: #f5c29c;
     }
@@ -71,12 +119,18 @@ export const NotoSansBoldFont = styled.div`
     color: #2c2828;
     font-family: NotoSans_Bold !important;
     font-size: 200px;
+    @media only screen and (max-width: 1400px) {
+        display: none;
+    }
 `;
 export const NotoSansThinFont = styled.div`
     color: #2c2828;
     margin-left: 450px;
     font-family: NotoSans_Thin !important;
     font-size: 150px;
+    @media only screen and (max-width: 1400px) {
+        display: none;
+    }
 `;
 export const heightWrapper = styled.div`
     position: absolute;
@@ -89,18 +143,33 @@ export const heightWrapper = styled.div`
         top: 260px;
         height: 590px;
     }
+    @media only screen and (max-width: 1400px) {
+        left: 90vw;
+    }
+
+    @media only screen and (max-width: 500px) {
+        height: 300px;
+        top: 200px;
+    }
 `;
 
 export const decorate = styled.div`
     width: 240px;
     height: 100%;
     background: rgb(201, 156, 245);
+    @media only screen and (max-width: 1400px) {
+        width: 10vw;
+    }
 `;
 export const decorate2 = styled.div`
     margin-left: 180px;
     width: 150px;
     height: 100%;
     background: rgb(201, 156, 245);
+    @media only screen and (max-width: 1400px) {
+        width: 24vw;
+        margin-left: 18vw;
+    }
 `;
 
 export const widthContent = styled.div`
@@ -111,6 +180,12 @@ export const widthContent = styled.div`
     color: rgb(201, 156, 245);
     padding-right: 20px;
     background: white;
+    @media only screen and (max-width: 900px) {
+        font-size: 12px;
+    }
+    @media only screen and (max-width: 500px) {
+        font-size: 8px;
+    }
 `;
 export const heightContent = styled.div`
     height: auto;
@@ -123,4 +198,11 @@ export const heightContent = styled.div`
     white-space: nowrap;
     background: white;
     padding-bottom: 20px;
+    @media only screen and (max-width: 900px) {
+        font-size: 12px;
+    }
+    @media only screen and (max-width: 500px) {
+        font-size: 8px;
+        padding-bottom: 10px;
+    }
 `;
