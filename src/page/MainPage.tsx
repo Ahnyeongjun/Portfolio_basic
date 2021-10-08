@@ -1,10 +1,10 @@
 import React from 'react';
-import Intro from '../component/Intro/Intro';
+import PortfolioPage from '../component/Intro/portfolioPage';
 import * as S from './style';
 const MainPage = () => {
     return (
         <S.MainWrapper>
-            <Intro />
+            <PortfolioPage />
         </S.MainWrapper>
     );
 };
