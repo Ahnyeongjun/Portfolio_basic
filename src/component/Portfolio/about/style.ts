@@ -1,21 +1,45 @@
 import styled, { keyframes } from 'styled-components';
-
+export const inner = styled.div`
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+`;
 export const About = styled.div`
+    background-color: transparent;
+    perspective: 1000px;
     display: flex;
-    flex-direction: column;
-    height: auto;
-    margin: auto 0;
+    height: 50%;
+    align-items: center;
+    width: 1200px;
+    margin: auto auto;
+
+    :hover {
+        ${inner} {
+            transform: rotateY(180deg);
+        }
+    }
 `;
 export const AboutWrapper = styled.div`
     display: flex;
     flex-direction: column;
     height: 100vh;
     margin: auto 0;
+    @media only screen and (max-width: 1200px) {
+        width: 100vw;
+    }
 `;
 export const topWrapper = styled.div`
+    align-items: center;
     display: flex;
-    width: 1100px;
-    margin: 0 auto;
+    width: 500px;
+    margin: auto 50px;
+    @media only screen and (max-width: 1200px) {
+        width: 100vw;
+        margin: 0;
+    }
 `;
 export const BoldKoreanFont = styled.div`
     font-size: 75px;
@@ -25,19 +49,25 @@ export const BoldKoreanFont = styled.div`
 `;
 export const MiddleWrapper = styled.div`
     display: flex;
-    width: 1100px;
-    margin: 0 auto;
-    margin-top: 5vh;
+    width: 500px;
+    margin: auto 50px;
+    @media only screen and (max-width: 1200px) {
+        width: 100vw;
+        margin: 0;
+        margin-top: 5vh;
+    }
 `;
 export const leftWrapper = styled.div`
     width: 600px;
     display: flex;
     flex-direction: column;
+    margin: auto;
 `;
 export const rightWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    width: 420px;
+    width: 600px;
+    margin: auto;
 `;
 export const ItemWrapper2 = styled.div`
     display: flex;
@@ -59,7 +89,7 @@ export const Image = styled.div`
     margin: 0 15px;
 `;
 export const content = styled.div`
-    font-size: 30px;
+    font-size: 25px;
     color: #727272;
     width: calc(100% - 40px);
 `;
@@ -97,4 +127,25 @@ export const BottomContent = styled.div`
     color: rgb(201, 156, 245);
     font-size: 30px;
     padding: 0 20px;
+`;
+export const BackCard = styled.div`
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    border: rgb(201, 156, 245) solid 2px;
+
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+`;
+
+export const FrontCard = styled.div`
+    border: rgb(201, 156, 245) solid 2px;
+
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 `;

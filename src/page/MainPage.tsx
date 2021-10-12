@@ -1,5 +1,5 @@
 import React from 'react';
-import PortfolioPage from '../component/Intro/portfolioPage';
+import PortfolioPage from '../component/Portfolio/portfolioPage';
 import * as S from './style';
 const MainPage = () => {
     return (
