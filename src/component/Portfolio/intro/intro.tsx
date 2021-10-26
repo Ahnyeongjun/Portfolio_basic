@@ -1,5 +1,6 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React from 'react';
 import * as S from './style';
+import './style.css';
 const intro = () => {
     return (
         <S.Intro id="intro">
@@ -26,7 +27,7 @@ const intro = () => {
                 <svg width="100%" height="100%" viewBox="0 0 507 507" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="Group 2" filter="url(#filter0_d)">
                         <g id="background">
-                            <circle id="Ellipse 2" cx="253.5" cy="249.5" r="247" fill="#C99CF5" stroke="#C99CF5" stroke-width="5" />
+                            <circle id="Ellipse 2" cx="253.5" cy="249.5" r="247" fill="#C99CF5" stroke="#C99CF5" strokeWidth="5" />
                         </g>
                         <path
                             id="Vector"
