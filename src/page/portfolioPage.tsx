@@ -1,10 +1,10 @@
 import React from 'react';
-import Skill from './skill/skill';
-import About from './about/about';
-import Intro from './intro/intro';
-import Project from './project/project';
-import Footer from './footer/footer';
-import Header from './header/HeaderContainer';
+import Skill from '../component/portfolio/skill/skill';
+import About from '../component/portfolio/about/about';
+import Intro from '../component/portfolio/intro/intro';
+import Project from '../component/portfolio/project/project';
+import Footer from '../component/portfolio/footer/footer';
+import Header from '../component/portfolio/header/HeaderContainer';
 import * as S from './style';
 
 const portfolioPage = () => {

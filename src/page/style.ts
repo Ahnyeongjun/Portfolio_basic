@@ -1,9 +1,17 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-export const MainWrapper = styled.div`
-    position: relative;
-    display: flex;
+export const portfolio = styled.div`
     height: auto;
-    width: 100%;
-    flex-direction: column;
+
+    background: white;
+    @media only screen and (max-width: 1400px) {
+        width: 100vw;
+    }
+`;
+export const autoMargin = styled.div`
+    width: 1300px;
+    margin: 0 auto;
+    @media only screen and (max-width: 1400px) {
+        width: 100vw;
+    }
 `;

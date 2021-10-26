@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import MainPage from './page/MainPage';
+import MainPage from './page/portfolioPage';
 
 const Routing = () => {
     return (

@@ -4,9 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = () => {
     return {
-        devServer: {
-            hot: 'only', // hot:true
-        },
         entry: './src/index.tsx',
         resolve: {
             extensions: ['.ts', '.tsx', '.js'],
@@ -65,7 +62,6 @@ module.exports = () => {
             }),
         ],
         devServer: {
-            //   inline: true,
             hot: true,
             historyApiFallback: true,
         },
