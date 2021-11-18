@@ -3,7 +3,7 @@ import * as S from './styles';
 
 import HamburgerMenu from '../HambugerMenu/HamburgerMenu';
 
-const HeaderContainer = (props: any) => {
+const HeaderContainer = () => {
     const onClickforHome = () => {
         window.scrollTo({
             top: 0,
@@ -54,7 +54,7 @@ const HeaderContainer = (props: any) => {
                         <S.Category_a onClick={onClickforProject}> Project</S.Category_a>
                     </S.Category_item>
                 </S.Blog_Category>
-                <HamburgerMenu scrollPosition={props.scrollPosition} />
+                <HamburgerMenu />
             </S.Header>
         </>
     );
