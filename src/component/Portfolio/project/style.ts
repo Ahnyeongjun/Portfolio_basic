@@ -39,13 +39,10 @@ export const backVer = styled.div<{ background: string }>`
         width: 350px;
     }
     @media only screen and (max-width: 750px) {
-        width: 300px;
-    }
-    @media only screen and (max-width: 620px) {
-        width: 250px;
+        width: 47vw;
+        
     }
     @media only screen and (max-width: 520px) {
-        width: 200px;
         height: 250px;
     }
     @media only screen and (max-width: 420px) {
@@ -57,6 +54,13 @@ export const ProjectTitle = styled.div`
     font-size:30px;
     font-family: NotoSansKRFont_Bold !important;
     color:white;
+    @media only screen and (max-width: 720px) {
+        font-size:24px;
+    }
+    @media only screen and (max-width: 520px) {
+        font-size:18px;
+    }
+    
 `
 export const frontVer = styled.div<{ background: string }>`
     width: 400px;
@@ -76,13 +80,9 @@ export const frontVer = styled.div<{ background: string }>`
         width: 350px;
     }
     @media only screen and (max-width: 750px) {
-        width: 300px;
-    }
-    @media only screen and (max-width: 620px) {
-        width: 250px;
+        width: 47vw;
     }
     @media only screen and (max-width: 520px) {
-        width: 200px;
         height: 250px;
     }
     @media only screen and (max-width: 420px) {
@@ -179,4 +179,9 @@ export const ProjectTag = styled.div`
     border-radius:50px;
     border: solid white 1px;
     font-size: 16px;
+    @media only screen and (max-width: 520px) {
+        :nth-child(2){
+            display: none;
+        }
+    }
 `;
