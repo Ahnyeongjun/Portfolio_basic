@@ -159,6 +159,7 @@ export const ProjectContentWrapper = styled.div`
         margin: auto;
     }
 `;
+
 export const projectContent = styled.a`
     text-align: center;
     color: #3a3a3a;
