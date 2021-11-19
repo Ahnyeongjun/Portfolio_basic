@@ -14,7 +14,7 @@ import {
     weleper_logo_portfolio,
     welper_screen_portfolio,
 } from '../../../asset/portfolio';
-import ProjectDetail from '../projectDetail/ModalWrapper';
+import ProjectDetail from '../projectDetail/ProjectDetail';
 const project = () => {
     const [projectDetail, setProjectDetail] = useState(true);
     const [number, setNumber] = useState(0);

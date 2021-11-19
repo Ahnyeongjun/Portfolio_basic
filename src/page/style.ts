@@ -1,8 +1,8 @@
 import styled, { keyframes } from 'styled-components';
 
 export const portfolio = styled.div`
-    height: auto;
-
+    overflow-x: hidden;
+    overflow-y: hidden;
     background: white;
     @media only screen and (max-width: 1400px) {
         width: 100vw;
