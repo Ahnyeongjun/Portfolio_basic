@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { blog_logo_portfolio } from '../../../asset/portfolio';
+import { blog_logo_portfolio, portfolio_camera_logo_portfolio, streaming_logo_portfolio } from '../../../asset/portfolio';
 import * as S from '.';
 
 type ProjectDetailProps = {
@@ -27,20 +27,56 @@ const ProjectDetail = (props: ProjectDetailProps) => {
     const id: number = props.projectNumber;
     const projectArray: ProjectDetail[] = [
         {
+            img: blog_logo_portfolio,
             title: 'MyBlog',
             site: 'https://youngjun.site/',
             github: 'https://github.com/Ahnyeongjun/MyBlog',
             id: 0,
             content: '2021에 만들게 된 블로그',
-            period: '2021-10 ~ 2021-11',
+            period: '2021-08 ~ 2021-10',
             involvement: '100%',
             member_count: 1,
             language: 'Typescript',
             color: '#9CC0F5',
             tool: ['react', 'redux', 'redux-saga', 'redux-toolkit', 'webpack', 'swiper', 'quill', 'koa', 'mysql', 'aws'],
         },
-        { title: 'Portfolio_2021', id: 1, content: 'S', period: 'S', involvement: 'S', member_count: 1 },
-        { title: 'Streaming_2021', id: 2, content: 'S', period: 'S', involvement: 'S', member_count: 1 },
+        {
+            img: portfolio_camera_logo_portfolio,
+            title: 'Portfolio_2021',
+            id: 1,
+            github: 'https://github.com/Ahnyeongjun/Portfolio_basic',
+            content: 'S',
+            period: '2021-10 ~ 2021-11',
+            involvement: '100%',
+            member_count: 1,
+            color: '#C99CF5',
+            language: 'Typescript',
+            tool: ['react', 'webpack', 'cloudfront', 'aws'],
+        },
+        {
+            img: streaming_logo_portfolio,
+            title: 'Streaming_2021',
+            id: 2,
+            content: 'S',
+            period: '2021-10 ~ 진행 중 (회사 일로 잠시 중단)',
+            involvement: '진행 중 (회사 일로 잠시 중단)',
+            member_count: 1,
+            color: '#768CD1',
+            language: 'Typescript',
+            tool: [
+                'react',
+                'redux',
+                'redux-saga',
+                'redux-toolkit',
+                'webpack',
+                'socket.io',
+                'ffmpeg',
+                'koa',
+                'mysql',
+                'aws',
+                'node-mediaServer',
+            ],
+        },
         { title: 'PortFolio_sticky', id: 3, content: 'S', period: 'S', involvement: 'S', member_count: 1 },
         { title: 'Welper', id: 4, content: 'S', period: 'S', involvement: 'S', member_count: 1 },
         { title: 'Upgrade', id: 5, content: 'S', period: 'S', involvement: 'S', member_count: 1 },
@@ -50,7 +86,7 @@ const ProjectDetail = (props: ProjectDetailProps) => {
             <S.ProjectDetailPage>
                 <S.autoMargin>
                     <S.titleWrapper>
-                        <S.projectImg src={blog_logo_portfolio} />
+                        <S.projectImg src={projectArray[id].img} />
                         <S.title color={projectArray[id].color}>{projectArray[id].title} </S.title>
                         {projectArray[id].site && <S.intro href={projectArray[id].site}>- ({projectArray[id].site})</S.intro>}
                     </S.titleWrapper>
