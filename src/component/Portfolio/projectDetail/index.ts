@@ -93,10 +93,10 @@ export const gridContent = styled.a`
 
 margin-left: 20px;
 `;
-export const intro = styled.a`
+export const intro = styled.a <{ color: string }>`
   font-size:30px;
   margin-left:15px;
-  color: #9CC0F5;  
+  color: ${props => props.color} ;
   margin-top:25px;
   font-family: NotoSansKRFont_Bold !important;
   :link,:visited ,:active {

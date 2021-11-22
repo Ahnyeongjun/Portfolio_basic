@@ -36,7 +36,7 @@ const ProjectDetail = (props: ProjectDetailProps) => {
         {
             img: blog_logo_portfolio,
             title: 'MyBlog',
-            site: 'https://youngjun.site/',
+            site: 'https://youngjun.site',
             github: 'https://github.com/Ahnyeongjun/MyBlog',
             id: 0,
             content: '2021에 만들게 된 블로그',
@@ -50,6 +50,7 @@ const ProjectDetail = (props: ProjectDetailProps) => {
         {
             img: portfolio_camera_logo_portfolio,
             title: 'Portfolio_2021',
+            site: 'https://portfolio.youngjun.site',
             id: 1,
             github: 'https://github.com/Ahnyeongjun/Portfolio_basic',
             content: '2021에 만들게 된 포트폴리오',
@@ -132,7 +133,11 @@ const ProjectDetail = (props: ProjectDetailProps) => {
                     <S.titleWrapper>
                         <S.projectImg src={projectArray[id].img} />
                         <S.title color={projectArray[id].color}>{projectArray[id].title} </S.title>
-                        {projectArray[id].site && <S.intro href={projectArray[id].site}>- ({projectArray[id].site})</S.intro>}
+                        {projectArray[id].site && (
+                            <S.intro color={projectArray[id].color} href={projectArray[id].site}>
+                                - ({projectArray[id].site})
+                            </S.intro>
+                        )}
                     </S.titleWrapper>
                     <S.gridTemplete color={projectArray[id].color}>
                         <S.gridItem color={projectArray[id].color}>
