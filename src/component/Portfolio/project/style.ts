@@ -186,3 +186,26 @@ export const ProjectTag = styled.div`
         }
     }
 `;
+export const BottomWrapper = styled.div`
+    margin-top: 20vh;
+    display: flex;
+    background: rgb(201, 156, 245);
+    height: 5px;
+    width: 1300px;
+    flex-direction: row-reverse;
+    @media only screen and (max-width: 1300px) {
+        width: 100vw;
+    }
+    @media only screen and (max-width: 800px) {
+        margin-top: 5vh;
+    }
+`;
+export const BottomContent = styled.div`
+    background: white;
+    color: rgb(201, 156, 245);
+    font-size: 30px;
+    padding: 0 20px;
+    @media only screen and (max-width: 1300px) {
+        font-size: 20px;
+    }
+`;

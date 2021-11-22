@@ -16,7 +16,7 @@ import {
 } from '../../../asset/portfolio';
 import ProjectDetail from '../projectDetail/ProjectDetail';
 const project = () => {
-    const [projectDetail, setProjectDetail] = useState(true);
+    const [projectDetail, setProjectDetail] = useState(false);
     const [number, setNumber] = useState(0);
     const closeDetailModal = () => {
         setProjectDetail(false);
@@ -171,6 +171,9 @@ const project = () => {
         </S.frontVer>
     </S.projectItemWrapper>
 </S.projectWrapper>*/}
+                    <S.BottomWrapper>
+                        <S.BottomContent>2021. Project</S.BottomContent>
+                    </S.BottomWrapper>
                 </S.Project>
             )}
         </>

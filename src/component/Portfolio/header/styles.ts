@@ -4,12 +4,13 @@ export const Header = styled.header`
     grid-area: header;
     //sticky 헤더 고정
     height: 60px;
-    position: sticky;
+    width: 100vw;
+    position: fixed;
     top: 0;
     display: flex;
     background: black;
     justify-content: space-between;
-    z-index: 100;
+    z-index: 2000;
 
     @media only screen and (max-width: 800px) {
         width: 100vw;

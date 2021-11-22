@@ -5,11 +5,13 @@ import HamburgerMenu from '../HambugerMenu/HamburgerMenu';
 
 const HeaderContainer = () => {
     const onClickforHome = () => {
+        if (location.href != location.origin + '/') location.href = '/';
         window.scrollTo({
             top: 0,
         });
     };
     const onClickforAbout = () => {
+        if (location.href != location.origin + '/') location.href = '/';
         window.innerWidth > 500
             ? window.scrollTo({
                   top: 900,
@@ -19,6 +21,7 @@ const HeaderContainer = () => {
               });
     };
     const onClickforSkill = () => {
+        if (location.href != location.origin + '/') location.href = '/';
         window.innerWidth > 500
             ? window.scrollTo({
                   top: 1800,
@@ -28,6 +31,7 @@ const HeaderContainer = () => {
               });
     };
     const onClickforProject = () => {
+        if (location.href != location.origin + '/') location.href = '/';
         window.innerWidth > 500
             ? window.scrollTo({
                   top: 3000,
@@ -38,7 +42,7 @@ const HeaderContainer = () => {
     };
     return (
         <>
-            <S.Header>
+            <S.Header onClick={() => (location.href = '/')}>
                 <S.Blog_Link>HappyGuy's PortFolio</S.Blog_Link>
                 <S.Blog_Category>
                     <S.Category_item>

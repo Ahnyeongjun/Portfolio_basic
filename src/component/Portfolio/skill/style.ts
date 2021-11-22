@@ -5,7 +5,6 @@ export const Skill = styled.div`
     flex-direction: column;
     height: 100vh;
     min-height: 1100px;
-
     width: 1300px;
     margin: auto auto;
     padding-top: 100px;

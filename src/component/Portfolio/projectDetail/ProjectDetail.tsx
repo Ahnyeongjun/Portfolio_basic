@@ -1,6 +1,13 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { blog_logo_portfolio, portfolio_camera_logo_portfolio, streaming_logo_portfolio } from '../../../asset/portfolio';
+import {
+    blog_logo_portfolio,
+    portfolio_camera_logo_portfolio,
+    portfolio_sticky_logo_portfolio,
+    streaming_logo_portfolio,
+    upgrade_log_portfolio,
+    weleper_logo_portfolio,
+} from '../../../asset/portfolio';
 import * as S from '.';
 
 type ProjectDetailProps = {
@@ -45,7 +52,7 @@ const ProjectDetail = (props: ProjectDetailProps) => {
             title: 'Portfolio_2021',
             id: 1,
             github: 'https://github.com/Ahnyeongjun/Portfolio_basic',
-            content: 'S',
+            content: '2021에 만들게 된 포트폴리오',
             period: '2021-10 ~ 2021-11',
             involvement: '100%',
             member_count: 1,
@@ -57,9 +64,9 @@ const ProjectDetail = (props: ProjectDetailProps) => {
             img: streaming_logo_portfolio,
             title: 'Streaming_2021',
             id: 2,
-            content: 'S',
-            period: '2021-10 ~ 진행 중 (회사 일로 잠시 중단)',
-            involvement: '진행 중 (회사 일로 잠시 중단)',
+            content: '소켓과 영상처리를 목표로 시작한 개인 프로젝트',
+            period: '2021-10 ~ 진행 중 (회사 업무로 잠시 중단)',
+            involvement: '진행 중 (회사 업무로 잠시 중단)',
             member_count: 1,
             color: '#768CD1',
             language: 'Typescript',
@@ -77,9 +84,42 @@ const ProjectDetail = (props: ProjectDetailProps) => {
                 'node-mediaServer',
             ],
         },
-        { title: 'PortFolio_sticky', id: 3, content: 'S', period: 'S', involvement: 'S', member_count: 1 },
-        { title: 'Welper', id: 4, content: 'S', period: 'S', involvement: 'S', member_count: 1 },
-        { title: 'Upgrade', id: 5, content: 'S', period: 'S', involvement: 'S', member_count: 1 },
+        {
+            img: portfolio_sticky_logo_portfolio,
+            title: 'PortFolio_sticky',
+            id: 3,
+            content: 'S',
+            period: '2021-02 ~ 2021-06',
+            involvement: 'backend 100%',
+            member_count: 1,
+            language: 'Javascript',
+            tool: ['SpringBoot', 'aws', 'react', 'mysql'],
+            color: '#FFDC00',
+        },
+        {
+            img: weleper_logo_portfolio,
+            title: 'Welper',
+            id: 4,
+            content: '3학년때의 마지막 팀프로젝트',
+            period: '2021-02 ~ 2021-06',
+            involvement: 'backend 100%',
+            member_count: 3,
+            language: 'Kotlin',
+            tool: ['SpringBoot', 'aws', 'mysql'],
+            color: '#802457',
+        },
+        {
+            img: upgrade_log_portfolio,
+            title: 'Upgrade (ver1)',
+            id: 5,
+            content: '동아리 관리 팀프로젝트',
+            period: '2021-02 ~ 2021-08',
+            involvement: 'backend 25% (공지사항, 투표, 권한)',
+            member_count: 6,
+            language: 'Java',
+            tool: ['SpringBoot', 'aws', 'mysql'],
+            color: '#232323',
+        },
     ];
     return (
         <S.Modal onClick={() => props.onClick()}>
@@ -138,7 +178,10 @@ const ProjectDetail = (props: ProjectDetailProps) => {
                                 <S.gridTitle>라이브러리</S.gridTitle>
                             </S.gridTitleWrapper>
                             <S.gridContentWrapper>
-                                <S.gridContent> {projectArray[id].tool.map((e) => e + ', ')}</S.gridContent>
+                                <S.gridContent>
+                                    {projectArray[id].tool.pop()}
+                                    {projectArray[id].tool.map((e) => ', ' + e)}
+                                </S.gridContent>
                             </S.gridContentWrapper>
                         </S.gridItem>
                     </S.gridTemplete>
