@@ -63,6 +63,7 @@ const ProjectDetail = (props: ProjectDetailProps) => {
         {
             img: streaming_logo_portfolio,
             title: 'Streaming_2021',
+            github: '비공개',
             id: 2,
             content: '소켓과 영상처리를 목표로 시작한 개인 프로젝트',
             period: '2021-10 ~ 진행 중 (회사 업무로 잠시 중단)',
@@ -86,6 +87,7 @@ const ProjectDetail = (props: ProjectDetailProps) => {
         },
         {
             img: portfolio_sticky_logo_portfolio,
+            github: 'https://github.com/portfolio-postit',
             title: 'PortFolio_sticky',
             id: 3,
             content: 'S',
@@ -98,6 +100,7 @@ const ProjectDetail = (props: ProjectDetailProps) => {
         },
         {
             img: weleper_logo_portfolio,
+            github: 'https://github.com/DSM-welper',
             title: 'Welper',
             id: 4,
             content: '3학년때의 마지막 팀프로젝트',
@@ -110,6 +113,7 @@ const ProjectDetail = (props: ProjectDetailProps) => {
         },
         {
             img: upgrade_log_portfolio,
+            github: 'https://github.com/DSM-Upgrade',
             title: 'Upgrade (ver1)',
             id: 5,
             content: '동아리 관리 팀프로젝트',
@@ -185,6 +189,7 @@ const ProjectDetail = (props: ProjectDetailProps) => {
                             </S.gridContentWrapper>
                         </S.gridItem>
                     </S.gridTemplete>
+                    <div>상세정보는 후에 추가 예정입니다.</div>
                 </S.autoMargin>
             </S.ProjectDetailPage>
         </S.Modal>
