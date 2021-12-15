@@ -42,8 +42,8 @@ const HeaderContainer = () => {
     };
     return (
         <>
-            <S.Header onClick={() => (location.href = '/')}>
-                <S.Blog_Link>HappyGuy's PortFolio</S.Blog_Link>
+            <S.Header>
+                <S.Blog_Link onClick={() => (location.href = '/')}>HappyGuy's PortFolio</S.Blog_Link>
                 <S.Blog_Category>
                     <S.Category_item>
                         <S.Category_a onClick={onClickforHome}> Home</S.Category_a>
