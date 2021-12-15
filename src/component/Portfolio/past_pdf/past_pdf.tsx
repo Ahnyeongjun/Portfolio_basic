@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import * as S from './style';
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import { portFolio_pdf } from '../../../asset/portfolio';
@@ -11,12 +11,14 @@ const past_pdf = () => {
         setNumPages(numPages);
     };
     const onIncreasePageNumber = () => {
-        if (pageNumber != numPages) setPageNumber(pageNumber - 1);
-        setPageNumber(pageNumber + 1);
+        if (pageNumber < numPages) setPageNumber(pageNumber + 1);
     };
     const onDecreasePageNumber = () => {
         if (pageNumber != 1) setPageNumber(pageNumber - 1);
     };
+    useMemo(() => {
+        if (pageNumber > 6) setPageNumber(6);
+    }, []);
     return (
         <S.Past_pdf>
             <S.Flex_row>

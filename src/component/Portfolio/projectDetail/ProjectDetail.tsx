@@ -1,5 +1,4 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import {
     blog_logo_portfolio,
     portfolio_camera_logo_portfolio,
@@ -93,7 +92,7 @@ const ProjectDetail = (props: ProjectDetailProps) => {
             id: 3,
             content: 'S',
             period: '2021-02 ~ 2021-06',
-            involvement: 'backend 100%',
+            involvement: '100%',
             member_count: 1,
             language: 'Javascript',
             tool: ['SpringBoot', 'aws', 'react', 'mysql'],
