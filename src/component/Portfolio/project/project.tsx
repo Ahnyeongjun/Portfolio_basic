@@ -15,15 +15,17 @@ import {
     welper_screen_portfolio,
 } from '../../../asset/portfolio';
 import ProjectDetail from '../projectDetail/ProjectDetail';
+import ProjectItem from "./projectItem";
+
 const project = () => {
     const [projectDetail, setProjectDetail] = useState(false);
     const [number, setNumber] = useState(0);
     const closeDetailModal = () => {
         setProjectDetail(false);
     };
-    const OpenDetailModal = async (num: number) => {
-        await setNumber(num);
-        await setProjectDetail(true);
+    const OpenDetailModal =  (num: number) => {
+         setNumber(num);
+         setProjectDetail(true);
     };
     return (
         <>
@@ -36,141 +38,15 @@ const project = () => {
                     </S.ProjectContentWrapper>
 
                     <S.projectWrapper>
-                        <S.projectItemWrapper onClick={() => OpenDetailModal(0)}>
-                            <S.backVer background={'#4DB387'}>
-                                <S.ProjectTitle>MyBlog</S.ProjectTitle>
-                                <S.ProjectTagWrapper>
-                                    <S.ProjectTag> 관여도 100% </S.ProjectTag>
-                                </S.ProjectTagWrapper>
-                                <S.projectScreenImg src={blog_screen_portfolio} />
-                            </S.backVer>
-                            <S.frontVer background={'#55C696'}>
-                                <S.projectImg src={blog_logo_portfolio} />
-                            </S.frontVer>
-                        </S.projectItemWrapper>
-                        <S.projectItemWrapper onClick={() => OpenDetailModal(1)}>
-                            <S.backVer background={'#4DB3B3'}>
-                                <S.ProjectTitle>Portfolio_2021</S.ProjectTitle>
-                                <S.ProjectTagWrapper>
-                                    <S.ProjectTag> 관여도 100% </S.ProjectTag>
-                                </S.ProjectTagWrapper>
-                                <S.projectScreenImg src={portfolio_camera_screen_portfolio} />
-                            </S.backVer>
-                            <S.frontVer background={'#55C6C6'}>
-                                <S.projectImg src={portfolio_camera_logo_portfolio} />
-                            </S.frontVer>
-                        </S.projectItemWrapper>
-                        <S.projectItemWrapper onClick={() => OpenDetailModal(2)}>
-                            <S.backVer background={'#4D75B3'}>
-                                <S.ProjectTitle>Streaming_2021</S.ProjectTitle>
-                                <S.ProjectTagWrapper>
-                                    <S.ProjectTag> 토이 프로젝트 </S.ProjectTag>
-                                    <S.ProjectTag> HLS, Socket </S.ProjectTag>
-                                </S.ProjectTagWrapper>
-                                <S.projectScreenImg src={streaming_screen_portfolio} />
-                            </S.backVer>
-                            <S.frontVer background={'#5582c6'}>
-                                <S.projectImg src={streaming_logo_portfolio} />
-                            </S.frontVer>
-                        </S.projectItemWrapper>
+                        <ProjectItem onClick = {() => OpenDetailModal(0)} name = "MyBlog" backVerColor = '#4DB387' frontVerColor = '#55C696' projectScreenimg ={blog_screen_portfolio} projectImg={blog_logo_portfolio} projectTag = {["관여도 100%"]}/>
+                        <ProjectItem onClick = {() => OpenDetailModal(1)} name = "Portfolio_2021" backVerColor = '#4DB3B3' frontVerColor = '#55C6C6' projectScreenimg ={portfolio_camera_screen_portfolio} projectImg={portfolio_camera_logo_portfolio} projectTag = {["관여도 100%"]}/>
+                        <ProjectItem onClick = {() => OpenDetailModal(2)} name = "Streaming_2021" backVerColor = '#4D75B3' frontVerColor = '#5582c6' projectScreenimg ={streaming_screen_portfolio} projectImg={streaming_logo_portfolio} projectTag = {[" 토이 프로젝트","HLS, Socket"]}/>
                     </S.projectWrapper>
-                    <S.ProjectContentWrapper>
-                        <S.projectContent>Project (NON Running)</S.projectContent>
-                    </S.ProjectContentWrapper>
-
                     <S.projectWrapper>
-                        <S.projectItemWrapper onClick={() => OpenDetailModal(3)}>
-                            <S.backVer background={'#4D5DB3'}>
-                                <S.ProjectTitle>PortFolio_sticky</S.ProjectTitle>
-                                <S.ProjectTagWrapper>
-                                    <S.ProjectTag> 관여도 100% </S.ProjectTag>
-                                    <S.ProjectTag> 첫 프론트앤드 </S.ProjectTag>
-                                </S.ProjectTagWrapper>
-                                <S.projectScreenImg src={portfolio_sticky_screen_portfolio} />
-                            </S.backVer>
-                            <S.frontVer background={'#5567C6'}>
-                                <S.projectImg src={portfolio_sticky_logo_portfolio} />
-                            </S.frontVer>
-                        </S.projectItemWrapper>
-                        <S.projectItemWrapper onClick={() => OpenDetailModal(4)}>
-                            <S.backVer background={'#B3A94D'}>
-                                <S.ProjectTitle>Welper</S.ProjectTitle>
-                                <S.ProjectTagWrapper>
-                                    <S.ProjectTag> 백앤드 100% </S.ProjectTag>
-                                </S.ProjectTagWrapper>
-                                <S.projectScreenImg src={welper_screen_portfolio} />
-                            </S.backVer>
-                            <S.frontVer background={'#C6BB55'}>
-                                <S.projectImg src={weleper_logo_portfolio} />
-                            </S.frontVer>
-                        </S.projectItemWrapper>
-                        <S.projectItemWrapper onClick={() => OpenDetailModal(5)}>
-                            <S.backVer background={'#98B34D'}>
-                                <S.ProjectTitle>Upgrade</S.ProjectTitle>
-                                <S.ProjectTagWrapper>
-                                    <S.ProjectTag> 백앤드 30% </S.ProjectTag>
-                                    <S.ProjectTag> 숙제, 투표 개발 </S.ProjectTag>
-                                </S.ProjectTagWrapper>
-                                <S.projectScreenImg src={upgrade_screen_portfolio} />
-                            </S.backVer>
-                            <S.frontVer background={'#A9C655'}>
-                                <S.projectImg src={upgrade_log_portfolio} />
-                            </S.frontVer>
-                        </S.projectItemWrapper>
-                        {/*   <S.projectItemWrapper>
-        <S.backVer background={'#55C696'}> </S.backVer>
-        <S.frontVer background={'#7955C6'}>
-            <S.projectImg src={upgrade_log_portfolio} />
-        </S.frontVer>
-    </S.projectItemWrapper>{' '}
-    <S.projectItemWrapper>
-        <S.backVer background={'#55C696'}> </S.backVer>
-        <S.frontVer background={'#C655C1'}>
-            <S.projectImg src={portfolio_logo_portfolio} />
-        </S.frontVer>
-    </S.projectItemWrapper>
- */}
+                        <ProjectItem onClick = {() => OpenDetailModal(3)} name = "PortFolio_stick" backVerColor = '#4D5DB3' frontVerColor = '#5567C6' projectScreenimg ={portfolio_sticky_screen_portfolio} projectImg={portfolio_sticky_logo_portfolio} projectTag = {["관여도 100%","첫 프론트앤드"]}/>
+                        <ProjectItem onClick = {() => OpenDetailModal(4)} name = "Welper" backVerColor = '#B3A94D' frontVerColor = '#C6BB55' projectScreenimg ={welper_screen_portfolio} projectImg={weleper_logo_portfolio} projectTag = {["백앤드 100%"]}/>
+                        <ProjectItem onClick = {() => OpenDetailModal(5)} name = "Upgrade" backVerColor = '#98B34D' frontVerColor = '#A9C655' projectScreenimg ={upgrade_screen_portfolio} projectImg={upgrade_log_portfolio} projectTag = {["백앤드 30%","숙제, 투표 개발"]}/>
                     </S.projectWrapper>
-                    {/*<S.projectWrapper>
-    <S.projectItemWrapper>
-        <S.backVer background={'#55C696'}> </S.backVer>
-        <S.frontVer background={'#C65592'}>
-            <S.projectImg src={portfolio_logo_portfolio} />
-        </S.frontVer>
-    </S.projectItemWrapper>
-    <S.projectItemWrapper>
-        <S.backVer background={'#55C696'}> </S.backVer>
-        <S.frontVer background={'#C67755'}>
-            <S.projectImg src={portfolio_logo_portfolio} />
-        </S.frontVer>
-    </S.projectItemWrapper>{' '}
-    <S.projectItemWrapper>
-        <S.backVer background={'#55C696'}> </S.backVer>
-        <S.frontVer background={'#C65555'}>
-            <S.projectImg src={portfolio_logo_portfolio} />
-        </S.frontVer>
-    </S.projectItemWrapper>
-</S.projectWrapper>
-<S.projectWrapper>
-    <S.projectItemWrapper>
-        <S.backVer background={'#55C696'}> </S.backVer>
-        <S.frontVer background={'#C69255'}>
-            <S.projectImg src={portfolio_logo_portfolio} />
-        </S.frontVer>
-    </S.projectItemWrapper>{' '}
-    <S.projectItemWrapper>
-        <S.backVer background={'#55C696'}> </S.backVer>
-        <S.frontVer background={'#C6BB55'}>
-            <S.projectImg src={weleper_logo_portfolio} />
-        </S.frontVer>
-    </S.projectItemWrapper>{' '}
-    <S.projectItemWrapper>
-        <S.backVer background={'#55C696'}> </S.backVer>
-        <S.frontVer background={'#A9C655'}>
-            <S.projectImg src={upgrade_log_portfolio} />
-        </S.frontVer>
-    </S.projectItemWrapper>
-</S.projectWrapper>*/}
                     <S.BottomWrapper>
                         <S.BottomContent>2021. Project</S.BottomContent>
                     </S.BottomWrapper>

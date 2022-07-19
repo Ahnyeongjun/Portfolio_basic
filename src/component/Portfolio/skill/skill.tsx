@@ -10,6 +10,7 @@ import {
     springboot_portfolio,
     typescript_portfolio,
 } from '../../../asset/portfolio';
+import SkillItem from './skillItem';
 const skill = () => {
     return (
         <S.Skill>
@@ -18,80 +19,16 @@ const skill = () => {
                     <S.projectContent>I can do</S.projectContent>
                 </S.ProjectContentWrapper>
                 <S.SkillWrapper>
-                    <S.skillItem>
-                        <S.SkillImage src={typescript_portfolio} />
-                        <S.SkillContentWrapper>
-                            <S.SkillContent> TypeScript - 90%</S.SkillContent>
-                        </S.SkillContentWrapper>
-                        <S.SkillProgressWrapper>
-                            <S.SkillProgress width={'90%'} background={'#3B96D4'} />
-                        </S.SkillProgressWrapper>
-                    </S.skillItem>
-                    <S.skillItem>
-                        <S.SkillImage src={docker_portfolio} />
-                        <S.SkillContentWrapper>
-                            <S.SkillContent> docker - 90%</S.SkillContent>
-                        </S.SkillContentWrapper>
-                        <S.SkillProgressWrapper>
-                            <S.SkillProgress width={'90%'} background={'#D0E9CF'} />
-                        </S.SkillProgressWrapper>
-                    </S.skillItem>
-                    <S.skillItem>
-                        <S.SkillImage src={java_portfolio} />
-                        <S.SkillContentWrapper>
-                            <S.SkillContent> java - 90%</S.SkillContent>
-                        </S.SkillContentWrapper>
-                        <S.SkillProgressWrapper>
-                            <S.SkillProgress width={'90%'} background={'#EBD7BA'} />
-                        </S.SkillProgressWrapper>
-                    </S.skillItem>
-                    <S.skillItem>
-                        <S.SkillImage src={javascript_portfolio} />
-                        <S.SkillContentWrapper>
-                            <S.SkillContent> javaScript - 90%</S.SkillContent>
-                        </S.SkillContentWrapper>
-                        <S.SkillProgressWrapper>
-                            <S.SkillProgress width={'90%'} background={'#F4E45C'} />
-                        </S.SkillProgressWrapper>
-                    </S.skillItem>
+                    <SkillItem imgSrc = {typescript_portfolio} content = " TypeScript - 90%" width = "90%" background={'#3B96D4'}/>
+                    <SkillItem imgSrc = {docker_portfolio} content = "  docker - study" width = "0%" background={'#D0E9CF'}/>
+                    <SkillItem imgSrc = {java_portfolio} content = " java - 90%" width = "90%" background={'#EBD7BA'}/>
+                    <SkillItem imgSrc = {javascript_portfolio} content = " javaScript - 90%" width = "90%" background={'#F4E45C'}/>
                 </S.SkillWrapper>
                 <S.SkillWrapper>
-                    <S.skillItem>
-                        <S.SkillImage src={react_portfolio} />
-                        <S.SkillContentWrapper>
-                            <S.SkillContent> react - 90%</S.SkillContent>
-                        </S.SkillContentWrapper>
-                        <S.SkillProgressWrapper>
-                            <S.SkillProgress width={'90%'} background={'#FFC898'} />
-                        </S.SkillProgressWrapper>
-                    </S.skillItem>
-                    <S.skillItem>
-                        <S.SkillImage src={springboot_portfolio} />
-                        <S.SkillContentWrapper>
-                            <S.SkillContent> react - 90%</S.SkillContent>
-                        </S.SkillContentWrapper>
-                        <S.SkillProgressWrapper>
-                            <S.SkillProgress width={'90%'} background={'#FFDAC7'} />
-                        </S.SkillProgressWrapper>
-                    </S.skillItem>
-                    <S.skillItem>
-                        <S.SkillImage src={nodejs_portfolio} />
-                        <S.SkillContentWrapper>
-                            <S.SkillContent> nodejs - 90%</S.SkillContent>
-                        </S.SkillContentWrapper>
-                        <S.SkillProgressWrapper>
-                            <S.SkillProgress width={'90%'} background={'#FFDEFA'} />
-                        </S.SkillProgressWrapper>
-                    </S.skillItem>
-                    <S.skillItem>
-                        <S.SkillImage src={kotlin_portfolio} />
-                        <S.SkillContentWrapper>
-                            <S.SkillContent> Kotlin - 90%</S.SkillContent>
-                        </S.SkillContentWrapper>
-                        <S.SkillProgressWrapper>
-                            <S.SkillProgress width={'90%'} background={'#CEC7FA'} />
-                        </S.SkillProgressWrapper>
-                    </S.skillItem>
+                    <SkillItem imgSrc = {react_portfolio} content = " react - 90%" width = "90%" background={'#FFC898'}/>
+                    <SkillItem imgSrc = {springboot_portfolio} content = " springboot - 90%" width = "90%" background={'#FFDAC7'}/>
+                    <SkillItem imgSrc = {nodejs_portfolio} content = " nodejs - 90%" width = "90%" background={'#FFDEFA'}/>
+                    <SkillItem imgSrc = {kotlin_portfolio} content = " Kotlin - study" width = "0%" background={'#CEC7FA'}/>
                 </S.SkillWrapper>
             </S.BigSkillWraper>
             <S.BottomWrapper>

@@ -134,6 +134,7 @@ export const projectScreenImg = styled.img`
     margin-top: 0;
     width: 240px;
     height: auto;
+    max-height: 160px;
     @media only screen and (max-width: 520px) {
         width: 200px;
     }

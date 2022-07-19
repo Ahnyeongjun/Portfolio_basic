@@ -18,7 +18,7 @@ const about = () => {
                             </S.ItemWrapper>
                             <S.ItemWrapper>
                                 <S.Image></S.Image>
-                                <S.content>010. 7670 . 3833</S.content>
+                                <S.content>010. 7670. 3833</S.content>
                             </S.ItemWrapper>
                             <S.ItemWrapper>
                                 <S.Image></S.Image>
@@ -42,13 +42,15 @@ const about = () => {
                             </S.ItemWrapper2>
                             <S.ItemWrapper2>
                                 <S.content2>한컴인스페이스</S.content2>
-                                <S.content2>2021. 07 ~ 2022. 10</S.content2>
+                                <S.content2>2021. 07 ~ 현재 진행중</S.content2>
                             </S.ItemWrapper2>
+                            <S.ItemWrapper2>
+                                <S.content2>한밭대학교</S.content2>
+                                <S.content2>2022. 03 ~ 현재 진행중</S.content2>
+                            </S.ItemWrapper2> 
                         </S.middleWrapper>
                     </S.BackCard>
                 </S.inner>
-                {/*
-                 */}
             </S.About>
             <S.BottomWrapper>
                 <S.BottomContent>2021. Profile - basic</S.BottomContent>
